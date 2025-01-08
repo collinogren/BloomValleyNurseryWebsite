@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Bloom Valley Nursery</title>
+  <link href="css/style.css" rel="stylesheet">
+  <meta content="" name="description">
+
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+  <meta content="" property="og:image:alt">
+
+  <link href="img/icon/BloomValleyNurseryIconCG.ico" rel="icon" sizes="any">
+  <link href="img/icon/BloomValleyNurseryIconCG.svg" rel="icon" type="image/svg+xml">
+  <link href="img/icon/BloomValleyNurseryIconCG.png" rel="apple-touch-icon">
+
+  <link href="site.webmanifest" rel="manifest">
+  <meta content="#f7f7f7" name="theme-color">
+</head>
+
+<body>
+<header class="header">
+  <nav class="navigation_bar">
+    <div class="logo_container">
+      <img alt="Bloom Valley Nursery Logo" class="header_logo" src="./img/icon/BloomValleyNurseryIconCG.png">
+      <h1 class="header_text">Bloom Valley Nursery</h1>
+    </div>
+    <ul class="navigation_bar_menu">
+      <li class="navigation_bar_item">
+        <a class="header_link" href="./index.html">Home</a>
+      </li>
+      <li class="navigation_bar_item">
+        <a class="header_link" href="./gallery.html">Gallery</a>
+      </li>
+      <li class="navigation_bar_item">
+        <div class="marker">You are currently on </div>
+        <a class="header_link" href="#">About Us</a>
+      </li>
+      <li class="navigation_bar_item">
+        <a class="header_link" href="./tree_planting.html">Tree Planting Events</a>
+      </li>
+    </ul>
+    <div role="button" aria-label="Navigation menu" class="hamburger_menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+<main class="content">
+  <h1>About Us</h1>
+  <p>Bloom Valley Nursery is a local, family-owned plant nursery in the area, specializing in the sale of a
+    wide variety of plants, trees, and gardening supplies. We aim to connect with gardening enthusiasts and
+    homeowners in the community who share a passion for horticulture.</p>
+  <p>Visit our Washington, DC location at 1600 Pennsylvania Avenue NW, Washington, DC 20500</p>
+  <p>Find our hours of business and form for special orders and feedback below.</p>
+  <hr>
+  <div class="about_container">
+    <div class="hours_container">
+      <h2>Hours</h2>
+      <p>Stop by anytime during our business hours.</p>
+      <p>Please note that we may be closed for holidays.</p>
+      <table class="hours_table">
+        <tr>
+          <th>Monday-Friday</th>
+          <td>9:00 AM–7:00 PM</td>
+        </tr>
+        <tr>
+          <th>Saturday</th>
+          <td>10:00 AM–5:00 PM</td>
+        </tr>
+        <tr>
+          <th>Sunday</th>
+          <td>12:00 PM–4:00 PM</td>
+        </tr>
+      </table>
+    </div>
+    <div class="form_container">
+      <h2>Make a special order or give feedback</h2>
+      <form action="./contact_us.php" method="POST">
+        <fieldset class="personal_info">
+          <div id="firstNameField" class="field_bundle">First name*: <input class="form_text" placeholder="First name" name="first_name" type="text" required></div>
+          <div id="lastNameField" class="field_bundle">Last name*: <input class="form_text" placeholder="Last name" name="last_name" type="text" required></div>
+          <div id="emailField" class="field_bundle">Email*: <input class="form_text" placeholder="Email address" name="email" type="email" required></div>
+          <div id="phoneField" class="field_bundle">Phone*: <input class="form_text" placeholder="Phone number" name="phone" type="tel" required></div>
+        </fieldset>
+        <div id="feedbackField" class="generic_form_container">Feedback / Special Orders*: <textarea placeholder="Feedback or special order instructions" class="form_text_area" name="comment" rows="10" cols="80" required></textarea></div>
+        <div id="specialOrderCheckbox" class="generic_form_container">Special Order <input class="form_checkbox" name="special_order" type="checkbox"></div>
+        <p>* Required field</p>
+        <input id="submitForm" class="form_button" type="submit" value="Submit">
+        <input class="form_button" type="reset" value="Clear">
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="social_links">
+    <a class="social_link" href="https://www.facebook.com/bloomvalleynursery" target="_blank"><img class="social_img" alt="Facebook" src="./img/social/Facebook_Logo_Primary.png"/></a>
+    <a class="social_link" href="https://www.instagram.com/bloomvalleynursery/" target="_blank"><img class="social_img" alt="Instagram" src="./img/social/Instagram_Glyph_Gradient.png"/></a>
+    <a class="social_link" href="https://twitter.com/bloomvalleynursery" target="_blank"><img class="social_img" alt="X" src="./img/social/logo-black.png"/></a>
+    <a class="social_link" href="https://youtube.com/@bloomvalleynursery" target="_blank"><img class="social_img" alt="Youtube" src="./img/social/youtube_social_icon_red.png"/></a>
+  </div>
+  <h2>Signup For Our Newsletter</h2>
+  <form action="javascript:alert('Thanks for subscribing!');" class="newsletter">
+    <label for="signup_email"></label>
+    <input class="form_text" id="signup_email" placeholder="Enter Your Email Address" required type="email"/>
+    <input class="form_button" type="submit" value="Subscribe"/>
+  </form>
+  <div class="footer_links">
+    <a class="footer_link" href="./index.html">Home</a>
+    <a class="footer_link" href="./gallery.html">Gallery</a>
+    <a class="footer_link" href="./about.html">About Us</a>
+    <a class="footer_link" href="./tree_planting.html">Tree Planting Events</a>
+  </div>
+</footer>
+<script src="js/hamburger.js"></script>
+</body>
+
+</html>

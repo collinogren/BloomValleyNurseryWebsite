@@ -1,0 +1,827 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* { border: 0; margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  background-color: #f7f7f7;
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #b3d4fc;
+}
+
+nav .marker { display: none; }
+
+.content {
+  margin: 0 10px 0 10px;
+}
+
+footer {
+  background-color: #b3d4fc;
+}
+
+h1 {
+  color: #00231c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 3.0rem;
+}
+
+h2 {
+  color: #00231c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 2.0rem;
+}
+
+h3 {
+  color: #00231c;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+}
+
+p, tr, td, input, label, textarea {
+  color: #00231c;
+  font-family: "Calibri", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: #014038;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+}
+
+.info_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.card {
+  align-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background: #00231c;
+  padding: 10px;
+  width: 450px;
+  height: 225px;
+  border-radius: 15px;
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+}
+
+.tree_planting_card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background: #00231c;
+  padding: 10px;
+  width: 450px;
+  height: 200px;
+  border-radius: 15px;
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+}
+
+.tree_planting_details {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p, .tree_planting_card p, .tree_planting_card h3 {
+  color: #f7f7f7;
+}
+
+a:hover {
+  color: #96baa0;
+}
+
+.header {
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+  margin-bottom: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+.navigation_bar {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navigation_bar_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  top: 0;
+  z-index: 3;
+}
+
+.hamburger_menu {
+  display: none;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: #014038;
+}
+
+@media(max-width:1200px) {
+  .hamburger_menu {
+    display: block;
+  }
+
+  .hamburger_menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger_menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger_menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navigation_bar_menu {
+    position: fixed;
+    right: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #b3d4fc80;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+
+  .navigation_bar_item {
+    margin: 20px 0;
+  }
+
+  .navigation_bar_menu.active {
+    right: 0;
+  }
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.header_logo {
+  align-content: center;
+  width: 125px;
+  max-width: 125px;
+  height: auto;
+}
+
+.header_links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+}
+
+.header_link {
+  font-size: 2.4rem;
+  color: #00231c;
+}
+
+.shop_links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.plants_link {
+  display: flex;
+  flex-grow: 1;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 1;
+  background-image: url("/img/gallery/Client1_AppleTree.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  border-radius: 10px;
+  color: #F0C06D;
+  -moz-box-shadow: 5px 10px 5px #888;
+  -webkit-box-shadow: 5px 10px 5px #888;
+  box-shadow: 5px 10px 5px #888;
+}
+
+.plants_link:hover {
+  color: #ecc58d;
+}
+
+.supplies_link {
+  display: flex;
+  flex-grow: 1;
+  width: 500px;
+  height: auto;
+  aspect-ratio: 1;
+  background-image: url("/img/gallery/Client1_PottingSoil.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2rem;
+  border-radius: 10px;
+  color: #F0C06D;
+  -moz-box-shadow: 5px 10px 5px #888;
+  -webkit-box-shadow: 5px 10px 5px #888;
+  box-shadow: 5px 10px 5px #888;
+}
+
+.supplies_link:hover {
+  color: #ecc58d;
+}
+
+.footer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*
+ * Gallery specific styles.
+ */
+
+.shop_container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.shop_item {
+  flex-grow: 1;
+  flex-basis: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 300px;
+  position: relative;
+  border-radius: 10px;
+
+  -moz-box-shadow: 5px 10px 5px #888;
+  -webkit-box-shadow: 5px 10px 5px #888;
+  box-shadow: 5px 10px 5px #888;
+}
+
+.shop_img {
+  flex-grow: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.social_links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  margin: 8px 8px 8px 8px
+}
+
+.social_img {
+  width: 32px;
+  height: auto;
+}
+
+.item_controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -34%);
+  z-index: 2;
+  background-color: #BDD4DABF;
+  width: 50%;
+  border-radius: 15px;
+  backdrop-filter: blur(3px);
+}
+
+button {
+  border: 2px solid #F0C06D;
+  border-radius: 16px;
+  background-color: #f0c06d;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ecc58d;
+}
+
+button:active {
+  background-color: #f3ae53;
+}
+
+.add_to_cart_button {
+  width: 90%;
+  padding: 10px 0 10px 0;
+  margin: 0 0 10px 0;
+}
+
+.about_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
+}
+
+.hours_container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hours_container table {
+  padding: 10px;
+  background-color: #00231c;
+  border-radius: 10px;
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+}
+
+.form_container {
+  flex-grow: 1;
+  background-color: #00231c;
+  padding: 15px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 10px 5px #888;
+  -webkit-box-shadow: 0 10px 5px #888;
+  box-shadow: 0 10px 5px #888;
+}
+
+.form_container form, .form_container p {
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form_container h2 {
+  color: #f7f7f7;
+  margin-bottom: 10px;
+}
+
+.form_button {
+  background-color: #F0C06D;
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+}
+
+.form_text {
+  border: 2px solid #F0C06D;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #f7f7f7;
+  flex-grow: 1;
+}
+
+.generic_form_container {
+  font-family: "Calibri", sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.personal_info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px
+}
+
+.field_bundle {
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+  font-family: "Calibri", sans-serif;
+  font-size: 1.6rem;
+}
+
+.field_bundle .form_text {
+  flex-grow: 1;
+}
+
+.form_text_area {
+  border: 2px solid #F0C06D;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #f7f7f7;
+  min-height: 200px;
+  width: 100%;
+}
+
+.cart_button_container {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+
+.cart_button {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 5px;
+}
+
+.cart_view {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 15px;
+
+  padding: 10px;
+  position: fixed;
+  overflow-y: scroll;
+  bottom: -100%;
+  right: -100%;
+  z-index: 5;
+  background-color: #00231c;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.cart_view.active {
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+
+.remove_button {
+  margin-bottom: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.cart_view_items {
+  width: 100%;
+}
+
+.cart_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px 3px 3px 3px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.cart_control_button {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.cart_controls_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.cart_item h2, .cart_item h3, .cart_view h3, #empty_cart h2 {
+  color: #f7f7f7;
+}
+
+.name_price_bundle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+th, td, tr {
+  text-align: center;
+  border: 1px solid #f7f7f7;
+  color: #f7f7f7;
+}
+
+th, td {
+  padding: 5px 5px 5px 5px;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

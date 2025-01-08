@@ -1,0 +1,12 @@
+{
+  "short_name": "",
+  "name": "",
+  "icons": [{
+    "src": "img/icon.BloomValleyNurseryIconCG.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#f7f7f7",
+  "theme_color": "#f7f7f7"
+}
